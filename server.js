@@ -4,7 +4,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.use('/api', require('./api/employees'));
+app.use('/', require('./api/employees'));
 
 app.use((req, res, next) => {
   res.status(404).send('Route not found.');
